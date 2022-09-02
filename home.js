@@ -79,7 +79,11 @@ function getMostPopularAuthors(books, authors) {
             console.log(popularAuthors)
         })
     })
-    return popularAuthors.sort((a, b) => b.count - a.count).slice(0, 5)
+    return topFiveSorted(popularAuthors)
+}
+
+function topFiveSorted(array) {
+    return array.sort((a, b) => b.count - a.count).slice(0, 5);
 }
 
 module.exports = {
