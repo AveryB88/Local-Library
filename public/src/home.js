@@ -59,7 +59,7 @@ function getMostPopularBooks(books) {
             count: borrowCount
         })
     }
-    return mostPopular.sort((a, b) => b.count - a.count).slice(0, 5)
+    return mostPopular.sort((popBook, borrowBook) => borrowBook.count - popBook.count).slice(0, 5)
 }
 
 
@@ -83,7 +83,7 @@ function getMostPopularAuthors(books, authors) {
 }
 
 function topFiveSorted(favAuth) {
-    return favAuth.sort((a, b) => b.count - a.count).slice(0, 5);
+    return favAuth.sort((platinumAuth, goldBook) => goldBook.count - platinumAuth.count).slice(0, 5);
 }
 
 module.exports = {
